@@ -1,10 +1,12 @@
---- inittab.org	2013-09-01 15:23:24.019583999 +0900
+--- inittab.org	2013-09-01 15:26:51.135093559 +0900
 +++ inittab	2013-04-22 02:39:45.848477442 +0900
-@@ -71,4 +71,7 @@
- #Spawn a getty on Raspberry Pi serial line
- #T0:23:respawn:/sbin/getty -L ttyAMA0 115200 vt100
+@@ -69,5 +69,9 @@
  
--k
+ 
+ #Spawn a getty on Raspberry Pi serial line
+-T0:23:respawn:/sbin/getty -L ttyAMA0 115200 vt100
++#T0:23:respawn:/sbin/getty -L ttyAMA0 115200 vt100
+ 
 +lo1::wait:/bin/echo "finished inittab"
 +lo2::once:/usr/bin/wvdial
 +lo3::wait:/bin/sleep 5
